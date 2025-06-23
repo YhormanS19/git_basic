@@ -1,0 +1,103 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000B0D;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 1rem; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 500px; 
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #3B3936
+
+    
+}
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem; 
+    background-color: transparent; 
+    border-radius: 0.5rem;
+    transition: background-color 0.1s ease;
+}
+.task-item:hover {
+    background-color: #B2BEBF;
+}
+.task-text {
+    flex-grow: 1;
+    color: #333;
+    font-size: 1.1rem;
+}
+.delete-btn {
+    background-color: #5FCDD9;
+    color: rgb(8, 8, 8);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.1s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.delete-btn:hover {
+    background-color: #FACFCE;
+    transform: translateY(-1px);
+}
+.add-btn {
+    
+    background-color: #5FCDD9; 
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10.00rem;
+    cursor: pointer;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.add-btn:hover {
+    background-color: #FACFCE;
+    transform: translateY(-1px);
+}
+.input-field {
+    padding: 0.75rem 1rem;
+    border: 2px solid #cbd5e1; 
+    border-radius: 0.75rem;
+    width: 100%;
+    margin-right: 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.rubik-puddles-regular {
+  font-family: "Rubik Puddles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.prioridades {
+
+    background-color: aqua;
+
+}
