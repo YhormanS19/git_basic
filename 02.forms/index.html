@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tu lista de tareas</title>
+</head>
+<body>
+    <div>
+        <h1 id="title">Registro de tareas</h1>
+        <form id="task-form">
+            <div>
+                <label for="task">Tarea:</label>
+                <input type="text" id="task" name="task" required>
+            </div>
+            <div>
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div>
+                <label for="priority">Prioridad:</label>
+                <select id="priority" name="priority" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+            </div>
+            <button type="submit">Agregar tarea</button>
+        </form>
+    </div>
+    <div>
+        <h2>Tareas registradas</h2>
+        <ol id="task-list"></ol>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
