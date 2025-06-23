@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zapatos YSEG Urbanos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Exile&family=Knewave&family=Shadows+Into+Light&family=Yellowtail&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Covered+By+Your+Grace&family=Exile&family=Faculty+Glyphic&family=Knewave&family=Meow+Script&family=Shadows+Into+Light&family=Yellowtail&display=swap"
+    rel="stylesheet">
+  <style>
+    
+    html,
+    body {
+
+
+      
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+      }
+
+      .video-background iframe {
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+      }
+
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+
+      
+      header,
+      main,
+      footer {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      main {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .galeria-productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .producto {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+
+      }
+
+
+      .producto img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .producto h3,
+      .producto p {
+        margin: 10px 0;
+      }
+
+      button {
+        margin: 5px;
+        padding: 8px 12px;
+        border: none;
+        background-color: #3f3f3e;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #589EA6;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Video de fondo -->
+  <div class="video-background">
+    <iframe
+      src="https://www.youtube.com/embed/geFi-ZpN2ZM?autoplay=1&mute=1&controls=0&loop=1&playlist=geFi-ZpN2ZM&modestbranding=1&rel=0&showinfo=0"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+  <div class="overlay"></div>
+  <div class="overlay"></div>
+
+
+  
+  <header>
+
+    <h1>Zapatos YSEG Urbanos</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="filtrarProductos('todos')">Todos</a></li>
+        <li><a href="#" onclick="filtrarProductos('novedades')">Novedades</a></li>
+        <li><a href="#" onclick="filtrarProductos('hombre')">Hombre</a></li>
+        <li><a href="#" onclick="filtrarProductos('mujer')">Mujer</a></li>
+        <li><a href="#" onclick="filtrarProductos('ofertas')">Ofertas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="productos">
+
+      <h2>Nuestros Modelos</h2>
+      <div class="galeria-productos">
+        <div class="producto" data-categoria="hombre novedades">
+          <img
+            src="https://neemans.com/cdn/shop/files/ND_-_Urban_Casuals_-_Fusion_Black_-_Web_Optimized_e_a3cd7aea-e157-42f0-80e7-5fda2c23675e.jpg?v=1739883933&width=800"
+            ; width="90%" weight="90%" alt="Modelo Street Vibe">
+          <h3>Modelo Street Vibe</h3>
+          <p>Un clásico reinventado para la ciudad. Ideal para tu día a día.</p>
+          <p class="precio">$85.000 COP</p>
+          <button onclick="agregarAlCarrito('Modelo Street Vibe', 85000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Modelo Street Vibe', 'Un clásico reinventado para la ciudad. Ideal para tu día a día.', 'https://via.placeholder.com/600x400?text=Modelo+Street+Vibe+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer ofertas">
+          <img src="imags/LadiesFEB-65 (1) (1).jpg" alt="Zapato bajo W">
+          <h3>Mocasin moderno</h3>
+          <p>Diseño clasico y delicado para amantes de la comodidad.</p>
+          <p class="precio">$95.000 COP</p>
+          <button onclick="agregarAlCarrito('Zapatilla Skate Pro', 95000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Zapatilla Skate Pro', 'Diseño robusto y cómodo para los amantes del skate.', 'https://via.placeholder.com/600x400?text=Zapatilla+Skate+Pro+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre">
+          <img src="imags/09b75c063ece75d3a5ac8858a1cf1690bbe514cb (1) (1).jpg" width="95%" ; weight="600x400?text"
+            alt="Zapato Casual Hombre">
+          <h3>Zapato Casual Urbano</h3>
+          <p>Comodidad y estilo para el hombre moderno.</p>
+          <p class="precio">$70.000 COP</p>
+          <button onclick="agregarAlCarrito('Zapato Casual Urbano', 70000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Zapato Casual Urbano', 'Comodidad y estilo para el hombre moderno.', 'https://via.placeholder.com/600x400?text=Zapato+Casual+Hombre+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer novedades">
+          <img src="imags/210600_side__89067 (1).jpg" ; width="90%" ; weight="90%" ; alt="Sneaker Chic">
+          <h3>Sneaker Chic</h3>
+          <p>Elegancia y confort para la mujer urbana. ¡Colección nueva!</p>
+          <p class="precio">$110.000 COP</p>
+          <button onclick="agregarAlCarrito('Sneaker Chic', 110000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Sneaker Chic', 'Elegancia y confort para la mujer urbana. ¡Colección nueva!', 'https://via.placeholder.com/600x400?text=Sneaker+Chic+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre ofertas">
+          <img src="imags/URBAN-UH315-BGBKOL (1).png" width="100%" width="100%" alt="Botín Adventure">
+          <h3>Botín Adventure</h3>
+          <p>Diseñado para la aventura urbana, máxima durabilidad.</p>
+          <p class="precio">$120.000 COP</p>
+          <button onclick="agregarAlCarrito('Botín Adventure', 120000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Botín Adventure', 'Diseñado para la aventura urbana, máxima durabilidad.', 'https://via.placeholder.com/600x400?text=Botín+Adventure+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer">
+          <img src="imags/Urbanclassic (2).jpg" alt="Zapatilla Sporty">
+          <h3>Zapatilla Sporty</h3>
+          <p>Ligereza y estilo para tus actividades diarias.</p>
+          <p class="precio">$80.000 COP</p>
+          <button onclick="agregarAlCarrito('Zapatilla Sporty', 80000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Zapatilla Sporty', 'Ligereza y estilo para tus actividades diarias.', 'https://via.placeholder.com/600x400?text=Zapatilla+Sporty+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre novedades">
+          <img src="imags/01_nike-air-max-muse (2).jpg" alt="Modelo Futurista">
+          <h3>Modelo Futurista</h3>
+          <p>Rompe esquemas con este diseño innovador y cómodo.</p>
+          <p class="precio">$130.000 COP</p>
+          <button onclick="agregarAlCarrito('Modelo Futurista', 130000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Modelo Futurista', 'Rompe esquemas con este diseño innovador y cómodo.', 'https://via.placeholder.com/600x400?text=Modelo+Futurista+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer novedades">
+          <img src="imags/nm_4914447_100296_m (1).jpg" alt="Plataforma Urbana">
+          <h3>Comasin Estrella</h3>
+          <p>Añade comodidad y estilo a tu look casual.</p>
+          <p class="precio">$105.000 COP</p>
+          <button onclick="agregarAlCarrito('Plataforma Urbana', 105000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Plataforma Urbana', 'Añade altura y estilo a tu look casual.', 'https://via.placeholder.com/600x400?text=Plataforma+Urbana+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre ofertas">
+          <img src="imags/Untitled design (2).png" alt="Mocasín Moderno" width="500vh">
+          <h3>Mocasín Moderno</h3>
+          <p>La combinación perfecta entre lo clásico y lo urbano, ¡con descuento!</p>
+          <p class="precio">$65.000 COP</p>
+          <button onclick="agregarAlCarrito('Mocasín Moderno', 65000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Mocasín Moderno', 'La combinación perfecta entre lo clásico y lo urbano, ¡con descuento!', 'https://via.placeholder.com/600x400?text=Mocasin+Moderno+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer">
+          <img src="imags/SANDALIAPLANADAFNEAZULREF.005137-3 (1).jpg" alt="Sandalia Cool">
+          <h3>Sandalia Cool</h3>
+          <p>Frescura y tendencia para los días cálidos.</p>
+          <p class="precio">$55.000 COP</p>
+          <button onclick="agregarAlCarrito('Sandalia Cool', 55000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Sandalia Cool', 'Frescura y tendencia para los días cálidos.', 'https://via.placeholder.com/600x400?text=Sandalia+Cool+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre">
+          <img src="imags/12240540009-a1m (1).jpg" alt="Zapato Resistente">
+          <h3>Zapato Resistente</h3>
+          <p>Diseñado para la durabilidad, ideal para uso rudo.</p>
+          <p class="precio">$90.000 COP</p>
+          <button onclick="agregarAlCarrito('Zapato Resistente', 90000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Zapato Resistente', 'Diseñado para la durabilidad, ideal para uso rudo.', 'https://via.placeholder.com/600x400?text=Zapato+Resistente+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer ofertas">
+          <img
+            src="imags/piedra_X22T196_Red_Wing_heritage_bota_corta_estilo_mocas_n_cl_sico_3425_para_mujer_en_piel_auburn_legacy (1).jpg"
+            alt="Bota Corta Estilo">
+          <h3>Bota Corta Estilo</h3>
+          <p>La bota que combina con todo, ¡aprovecha esta oferta!</p>
+          <p class="precio">$98.000 COP</p>
+          <button onclick="agregarAlCarrito('Bota Corta Estilo', 98000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Bota Corta Estilo', 'La bota que combina con todo, ¡aprovecha esta oferta!', 'https://via.placeholder.com/600x400?text=Bota+Corta+Estilo+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre novedades">
+          <img src="imags/silver-basam_0393740_00_4_3017038409 (1) (1).jpg" alt="Sneaker Monocromo">
+          <h3>Sneaker Monocromo</h3>
+          <p>Estilo minimalista y moderno para tu colección.</p>
+          <p class="precio">$115.000 COP</p>
+          <button onclick="agregarAlCarrito('Sneaker Monocromo', 115000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Sneaker Monocromo', 'Estilo minimalista y moderno para tu colección.', 'https://via.placeholder.com/600x400?text=Sneaker+Monocromo+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="mujer">
+          <img src="imags/full_image-2026334970893.jpg" alt="Zapatilla Retro">
+          <h3>Zapatilla Retro</h3>
+          <p>Un toque vintage que nunca pasa de moda.</p>
+          <p class="precio">$75.000 COP</p>
+          <button onclick="agregarAlCarrito('Zapatilla Retro', 75000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Zapatilla Retro', 'Un toque vintage que nunca pasa de moda.', 'https://via.placeholder.com/600x400?text=Zapatilla+Retro+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+        <div class="producto" data-categoria="hombre ofertas">
+          <img src="imags/NewBalanceFuelCellRebelV4MujerClayAshWhite2_512x512 (1).jpg" alt="Tenis Runner">
+          <h3>Tenis Runner</h3>
+          <p>Diseño ligero y cómodo para el día a día. ¡Últimas unidades!</p>
+          <p class="precio">$89.000 COP</p>
+          <button onclick="agregarAlCarrito('Tenis Runner', 89000)">Agregar al Carrito</button>
+          <button
+            onclick="verDetalles('Tenis Runner', 'Diseño ligero y cómodo para el día a día. ¡Últimas unidades!', 'https://via.placeholder.com/600x400?text=Tenis+Runner+Detalle')">Ver
+            Detalles</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>Tu Carrito de Compras</h2>
+      <ul id="lista-carrito">
+      </ul>
+      <p>Total: <span id="total-carrito">$0 COP</span></p>
+      <button onclick="realizarCompra()">Finalizar Compra</button>
+      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <section id="detalles-producto" class="oculto">
+      <h2>Detalles del Producto</h2>
+      <img id="detalle-imagen" src="" alt="Imagen del producto">
+      <h3 id="detalle-nombre"></h3>
+      <p id="detalle-descripcion"></p>
+      <button onclick="cerrarDetalles()">Cerrar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Zapatos Urbanos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
